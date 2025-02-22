@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/demo.css"> -->
+     <style>
+        
+        body{
+            color: rgb(20, 148, 208);
+            font-family:cursive;
+            background-image: url("resorse/Screenshot\ 2024-08-12\ 011640.png");
+            background-size: cover;
+            letter-spacing: .2em;
+            margin: 0 auto; 
+            animation: typing 3.5s steps(40, end),  blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from{ width: 0%; }  
+            to{ width: 100%; }  
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50%{ border-color:red; }
+
+        }
+#h1{
+    text-align: center;
+    height: 100px;
+    filter: drop-shadow(3px 3px 3px purple);
+    margin-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    background-image: url("/html/resorse/IMG_20240508_063646_494.jpg");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+#h1:hover{
+            transform: scale(1.1);
+        }
+
+        #head1{
+         width: 800px;
+        padding: 20px;
+        border: 3px solid transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        backdrop-filter: blur(50px);
+        text-align: center;
+        border: 12px white;
+        border-radius: 25%;
+        transition: all 1s ease-in-out 0s;
+        animation: rotate 1s ease-in 0s infinite normal;
+        }
+        @keyframes rotate {
+        0% {
+          border-right: 0.5px solid purple;
+        }
+        25% {
+          border-bottom: 0.5px solid purple;
+        }
+        60% {
+          border-left: 0.5px solid purple;
+        }
+        100% {
+          border-top: 0.5px solid purple;
+        }
+      }
+        #head1:hover{
+        box-shadow:30px 30px 25px purple;
+        }
+        #head{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+        }
+button {
+            font-size: 1em;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1em 2em;
+            margin-top: 100px;
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+            color: #0ebac5;
+            
+        }
+ 
+        button::before {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            border-top: 2px solid purple;
+            border-bottom: 2px solid purple;
+            transition: all 0.5s ease;
+        }
+ 
+        button::after {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            border-left: 2px solid purple; 
+            border-right: 2px solid purple; 
+            transition: all 0.5s ease;
+        }
+ 
+        button:hover::before {
+            transform: scale(1.2);
+            transform: rotate(45deg);
+        }
+ 
+        button:hover::after {
+            transform: scale(0);
+            transform: rotate(135deg);
+        
+        }
+        div{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        #login_id,#number,#ps,#email{
+            background-color: transparent;
+            color: purple;
+            
+        }
+
+
+     </style>
+    
+</head>
+<body>
+    <h1 id="h1"> <B>CHANGE_PASSWORD_PAGE</B> </h1>
+    <div id="head">
+      <div id="head1">
+        <div id="user">
+        <label for="login_id">User id:</label>
+        <input type="textarea" name="user id" id="login_id" placeholder="enteryour user_id">
+        </div>
+        <br>
+
+        <div id="num">
+            <label for="number">phone number:</label>
+            <input type="text" name="phone" id="number" maxlength="10" aria-errormessage="invelid" placeholder="enter your number">   
+        </div> 
+        <br>
+
+        
+        <div id="em">
+            <label for="email">email_id:</label>
+            <input type="email" name="email" id="email" placeholder="enter your email_id">   
+        </div> 
+        <br>
+
+        <div id="change">
+            <label for="ps">change password</label>
+            <input type="text" id="ps" name="change passwor" placeholder="enter your new password">
+        </div>
+        </div>
+    <div class="button">
+        <a href="/html/index.html"><button id="btn1" type="submit">Submit</button></a>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

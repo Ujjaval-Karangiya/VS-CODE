@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ *{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-color: black;
+}
+#container{
+    position: relative;
+    width: 700px;
+    height: 600px;
+    margin: 50px;
+    padding: 20px;
+    background-color: rgba(162, 153, 153, 0.259);
+    display: flex; 
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow:  5px 5px 5px 5px rgba(11, 62, 95, 0.737) ;
+    border: 12px white;
+    border-radius: 12px;
+}
+#di{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#yes{
+   
+    border:none;
+    width: 90px;
+    border-radius: 10px;
+    font-size: auto;
+    padding: 8px;
+    cursor: pointer;
+    transition: top 0.5s , left 0.5s;
+    margin-top: 20px;
+   
+}#target{
+    position: absolute;
+    left: 200px;
+    border: none;
+    width: 90px;
+    border-radius: 25px;
+    font-size: auto;
+    padding: 8px;
+    cursor: pointer;
+    transition: top 0.5s , left 0.5s;
+    margin-top: 20px;
+}
+button {
+     font-size: 1em;
+     border: none;
+     text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1em 2em;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    color: #0ebac5;
+}
+ 
+button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    border-top: 2px solid #0ebac5;
+    border-bottom: 2px solid #0ebac5;
+    transition: all 0.5s ease;
+}
+ 
+button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    border-left: 2px solid #0ebac5;
+    border-right: 2px solid #0ebac5;
+    transition: all 0.5s ease;
+    }
+ 
+button:hover::before {
+     transform: scale(1.1);
+}
+ 
+button:hover::after {
+    transform: scale(0);
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1><b> thay gai tyari to have youtube jo 😊😘</b></h1>
+            <div id="di">
+                <button id="target">NO</button>
+                <a href="https://youtube.com/"><button id="yes">YES</button></a> 
+            </div>
+           
+    </div>
+    <script>
+        const target = document.getElementById('target');
+        let yes = document.getElementById('no');
+       
+        function moveTarget(){
+            const maxwidth= 500;
+            const maxheight= 500;
+        
+            const randomX = Math.floor(Math.random() * maxwidth );
+            const randomY = Math.floor(Math.random() * maxheight);
+        
+            target.style.top = randomY+`px`;
+            target.style.left = randomX+`px`;
+        }
+        target.addEventListener('mousemove',function(){
+           moveTarget();
+        }) 
+    </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/demo.css"> -->
+    <style>
+        body {
+            color: rgb(20, 148, 208);
+            font-family: cursive;
+            background-color: black;
+            background-size: cover;
+            letter-spacing: .2em;
+            margin: 0 auto;
+            animation: typing 3.5s steps(40, end), blink-caret .75s infinite infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: red;
+            }
+
+        }
+
+        #h1 {
+            text-align: center;
+            height: 100px;
+            filter: drop-shadow(3px 3px 3px purple);
+            margin-top: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 50px;
+            background-image: url("/resorse/IMG_20240508_063646_494.jpg");
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        #h1:hover {
+            transform: scale(1.1);
+        }
+
+        #head1 {
+            width: 800px;
+            padding: 20px;
+            border: 3px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            backdrop-filter: blur(50px);
+            text-align: center;
+            border: 12px white;
+            border-radius: 25%;
+            transition: all 1s ease-in-out 0s;
+            animation: rotate 1s ease-in 0s infinite normal;
+        }
+
+        #head1:hover {
+            box-shadow: 30px 30px 25px purple;
+        }
+
+        @keyframes rotate {
+            0% {
+                border-right: 0.5px solid purple;
+            }
+
+            25% {
+                border-bottom: 0.5px solid purple
+            }
+
+            60% {
+                border-left: 0.5px solid purple
+            }
+
+            100% {
+                border-top: 0.5px solid purple;
+            }
+        }
+
+        #head {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        button {
+            font-size: 1em;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1em 2em;
+            margin-top: 100px;
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+            color: #0ebac5;
+        }
+
+        button::before {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            border-top: 2px solid purple;
+            border-bottom: 2px solid purple;
+            transition: all 0.5s ease;
+        }
+
+        button::after {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            border-left: 2px solid purple;
+            border-right: 2px solid purple;
+            transition: all 0.5s ease;
+        }
+
+        button:hover::before {
+            transform: scale(1.1);
+            transform: rotate(45deg);
+        }
+
+        button:hover::after {
+            transform: scale(0);
+            transform: rotate(135deg);
+        }
+
+        div {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login_id,
+        #password,
+        #age,
+        #ml,
+        #gen,
+        #ads {
+            background-color: transparent;
+            color: purple;
+
+        }
+
+        #head1,
+        #login_id,
+        #passwors,
+        #age,
+        #gender,
+        #ml,
+        #btn,
+        #user,
+        #passwor,
+        .age,
+        #mla,
+        #ads {
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        #head1:hover,
+        #login_id:hover,
+        #password:hover,
+        #age:hover,
+        #gender:hover,
+        #ml:hover,
+        #ads:hover,
+        #btn:hover,
+        #user:hover,
+        #passwor:hover,
+        .age:hover,
+        #mla:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="h1"> <B>SIGNIN_PAGE</B> </h1>
+
+    <div id="head">
+       <form action="/signin.php">
+        <div id="head1">
+        <div id="user">
+            <label for="login_id">User id:</label>
+            <input type="textarea" name="user id" id="login_id" placeholder="enteryour user_id"><br>
+        </div>
+        <br>
+        <div id="passwor">
+            <label for="password">password</label>
+            <input type="password" id="password" placeholder="enter your password"><br>
+
+        </div>
+
+        <br>
+
+        <div class="age">
+            <label for="age">date of birth:</label>
+            <input type="date" id="age"></input>
+        </div>
+        <br>
+        <
+            <br>
+        </div>
+        <div class="button">
+            <button id="btn1" type="theme">theme</button>
+            <button id="btn2" type="submit">Submit</button>
+        </div>
+        </div>
+        </form>
+       
+      
+    </div>
+    
+    <script>
+        let btn1 = document.querySelector("#btn1");
+        let modeBtn = document.querySelector("#btn1");
+        let currMode = "light";
+        let body = document.querySelector("body");
+
+        modeBtn.addEventListener("click", () => {
+            if (currMode === "light") {
+                currMode = "dark";
+                document.querySelector("body").style.backgroundColor = "black";
+                body.classList.remove("light");
+            }
+            else {
+                currMode = "light";
+                document.querySelector("body").style.backgroundColor = "white";
+                body.classList.add("light");
+                body.classList.remove("dark")
+            }
+            console.log(currMode);
+
+        });
+    </script>
+   
+</body>
+
+</html>

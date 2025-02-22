@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="">
+<style>
+a.highlight:hover {
+    color: yellow;
+}
+body:active{
+    background-color: rgb(29, 29, 27);
+}
+p{
+    text-align: center;
+    animation: zoom 3s normal 1s infinite;
+}
+@keyframes zoom {
+    0%{
+        color: blueviolet;
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.1);
+        color: aqua;
+    }
+    100%{
+        color: red;
+       transform: scale(1.0);
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- <h1 style="color: aqua;">Demo of the :hover selector</h1>
+
+<p>The :hover selector style links on mouse-over:</p>
+<input type="button" value="cliack" onclick="msg()"></input>
+
+<a href="https://www.w3schools.com">w3schools.com</a>
+<a href="https://www.wikipedia.org">wikipedia.org</a>
+<script>
+ function msg(){
+    alert("hello")
+    let userInput = prompt("Please enter your name:");
+    var a = userInput;
+    let userInput2 = prompt("Please enter your sirname:");
+    var b = userInput2;
+    var c = a+""+b;
+    alert(c);
+ }
+</script> -->
+<form action="index.php" method="post">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" required><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" required><br>
+    <input type="submit" value="Submit">
+    
+</form>
+</body>
+</html>
