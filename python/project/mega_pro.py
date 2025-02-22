@@ -41,16 +41,16 @@ if __name__=="__main__":
         try:
             with sr.Microphone() as source:
                 print("listening........")
-            #     audio = r.listen(source)
-            # word =r.recognize_google(audio)
-            word =input("what is key : ")
+                audio = r.listen(source)
+            word =r.recognize_google(audio)
+            # word =input("what is key : ")
             if (word.lower() == "java"):
                 speak("speak brother how can i help you")
                 with sr.Microphone() as source:
                      print("bol ne lodeee")
-                    #  audio = r.listen(source)
-                    #  command =r.recognize_google(audio)
-                     command =input("what you want :")      
+                     audio = r.listen(source)
+                     command =r.recognize_google(audio)
+                    #  command =input("what you want :")      
                      pc(command)
         except Exception as e:
             print("error; {0}".format(e))
